@@ -1,0 +1,151 @@
+[gd_scene load_steps=5 format=3 uid="uid://duqc8h25xp1t"]
+
+[ext_resource type="Script" uid="uid://dvw1a1an34eug" path="res://main.gd" id="1_10wyf"]
+[ext_resource type="PackedScene" uid="uid://b733crgdlgxo0" path="res://player.tscn" id="2_lhs13"]
+[ext_resource type="PackedScene" uid="uid://bjbo2w5l76eq8" path="res://candy.tscn" id="3_y5m4p"]
+[ext_resource type="PackedScene" uid="uid://mwx4l3r14465" path="res://obstacle.tscn" id="4_yfmwi"]
+
+[node name="main" type="Node2D" groups=["game"]]
+script = ExtResource("1_10wyf")
+
+[node name="Player" parent="." groups=["wall-group"] instance=ExtResource("2_lhs13")]
+position = Vector2(40, 88)
+
+[node name="Candies" type="Node2D" parent="."]
+
+[node name="candy" parent="Candies" instance=ExtResource("3_y5m4p")]
+position = Vector2(0, 784)
+
+[node name="candy2" parent="Candies" instance=ExtResource("3_y5m4p")]
+position = Vector2(352, 800)
+
+[node name="candy4" parent="Candies" instance=ExtResource("3_y5m4p")]
+position = Vector2(1120, 784)
+
+[node name="candy5" parent="Candies" instance=ExtResource("3_y5m4p")]
+position = Vector2(1136, 16)
+
+[node name="candy3" parent="Candies" instance=ExtResource("3_y5m4p")]
+position = Vector2(376, 168)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(400, 704)
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(64, 272)
+
+[node name="Obstacle16" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(64, 272)
+
+[node name="Obstacle4" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(64, 400)
+
+[node name="Obstacle5" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(296, 704)
+
+[node name="Obstacle6" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(824, 192)
+
+[node name="Obstacle30" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1216, 200)
+
+[node name="Obstacle31" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1088, 200)
+
+[node name="Obstacle22" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(904, 448)
+
+[node name="Obstacle23" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(528, 704)
+
+[node name="Obstacle24" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(656, 704)
+
+[node name="Obstacle25" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(784, 704)
+
+[node name="Obstacle26" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1032, 832)
+
+[node name="Obstacle27" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1032, 704)
+
+[node name="Obstacle28" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1032, 448)
+
+[node name="Obstacle29" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(1032, 576)
+
+[node name="Obstacle7" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(296, 832)
+
+[node name="Obstacle10" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(296, 832)
+
+[node name="Obstacle9" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(64, 656)
+
+[node name="Obstacle8" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(64, 528)
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(320, 64)
+
+[node name="Obstacle18" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(448, 64)
+
+[node name="Obstacle19" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(576, 64)
+
+[node name="Obstacle20" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(696, 64)
+
+[node name="Obstacle21" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(824, 64)
+
+[node name="Obstacle11" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(192, 440)
+
+[node name="Obstacle12" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(320, 440)
+
+[node name="Obstacle13" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(448, 440)
+
+[node name="Obstacle14" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(576, 440)
+
+[node name="Obstacle15" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(576, 312)
+
+[node name="Obstacle17" parent="Obstacles" instance=ExtResource("4_yfmwi")]
+position = Vector2(320, 192)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="scorelabel" type="Label" parent="UI"]
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 151.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 30
+text = "Candy 0/0"
+
+[node name="pause" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="overview" type="Label" parent="UI/pause"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 328.0
+offset_right = 696.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0.370082, 0.497198, 0.829568, 1)
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://wurnffjhak5x"]
+
+[ext_resource type="Script" uid="uid://skpv53clronc" path="res://main_menu.gd" id="1_3khmk"]
+
+[node name="main-menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3khmk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1296.0
+offset_bottom = 920.0
+color = Color(0.403634, 0.411361, 0.886567, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.2
+anchor_top = 5.4
+anchor_right = 24.4
+anchor_bottom = 20.2
+offset_left = 120.0
+offset_top = -88.0
+offset_right = -97.0001
+offset_bottom = -38.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.797095, 0.275576, 0.0972147, 1)
+theme_override_font_sizes/font_size = 100
+text = "sweet-09"
+horizontal_alignment = 1
+
+[node name="instructions" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/mono_font_size = 3
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 47
+bbcode_enabled = true
+text = "[center][b]How to Play[/b]
+• Move: Arrow Keys 
+• Collect all candy (green/white lollipops)
+• Avoid lava – touching it = lose
+"
+fit_content = true
+
+[node name="play" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.662745, 0.388235, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Play"

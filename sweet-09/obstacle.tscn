@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://mwx4l3r14465"]
+
+[ext_resource type="Script" uid="uid://bljeu4cfuj4n7" path="res://obstacle.gd" id="1_ru2gv"]
+[ext_resource type="Texture2D" uid="uid://bg1yifcn3m2lf" path="res://sweet-09_2d_assets/obstacles/lava.png" id="2_dgq8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks6pp"]
+size = Vector2(126, 127)
+
+[node name="Obstacle" type="Area2D"]
+script = ExtResource("1_ru2gv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dgq8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ks6pp")
